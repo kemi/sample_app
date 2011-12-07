@@ -27,6 +27,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'factory_girl_rails', '1.0'
 end
+group :production do
+gem 'pg'
+end
 
 gem 'jquery-rails'
 
