@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
   
  def create
+     #render 'new'
     user = User.authenticate(params[:session][:email],
                             params[:session][:password])
     if user.nil?
@@ -13,7 +14,8 @@ class SessionsController < ApplicationController
       render 'new'
     else
        sign_in user
-       redirect_to user
+        redirect_to user
+       #redirect_back_or user
       # Sign the user in and redirect to the user's show page.
     end
   end
